@@ -51,12 +51,6 @@ cat backup.sql | docker exec -i wp_mysql_5210 /usr/bin/mysql -u root --password=
 cp databases/wp_mysql_5210/backup.sql .
 ```
 
-**Commit to git**
-
-Create a .gitignore file with the following:
-
-* databases/
-
 ## Create a child Theme:
 
 **Create a new folder in**  `COMP5210-mini-press-master/wp-content/themes/`
