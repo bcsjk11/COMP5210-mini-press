@@ -20,8 +20,6 @@ services:
     image: mysql:5.7.20
     ports:
       - "3306:3306"
-    volumes:
-      - ./databases/wp_mysql_5210:/var/lib/mysql
     environment:
       MYSQL_DATABASE: "db5210"
       MYSQL_ROOT_PASSWORD: "123"
