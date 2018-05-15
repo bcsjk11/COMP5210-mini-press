@@ -84,3 +84,7 @@ Create a style.css file
  Text Domain:  twenty-fifteen-child
 */
 ```
+
+### Useful links :-)
+
+> DB Backup and Restore: https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb

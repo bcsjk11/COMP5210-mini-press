@@ -8,7 +8,7 @@ services:
       - "80:80"
       - "2222:22"
     volumes:
-      - ${PWD}:/var/www/html
+      - ./:/var/www/html
     container_name: wp_5210
     depends_on: 
       - wp_mysql_5210
@@ -21,7 +21,7 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ${PWD}/databases/wp_mysql_5210:/var/lib/mysql
+      - ./databases/wp_mysql_5210:/var/lib/mysql
     environment:
       MYSQL_DATABASE: "db5210"
       MYSQL_ROOT_PASSWORD: "123"
