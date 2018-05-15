@@ -59,7 +59,7 @@ named, chosen theme with -child appended to it
 
 **Open this folder in VSCode**
 
-Create a style.css file
+Create a style.css and a functions.php file
 
 **Code Snippet for style.css:**
 
