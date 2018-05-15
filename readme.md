@@ -61,7 +61,9 @@ named, chosen theme with -child appended to it
 
 Create a style.css file
 
-**Code Snippet for child Theme:**
+**Code Snippet for style.css:**
+
+Change the details to suit your theme and details
 
 ```
 /*
@@ -77,6 +79,25 @@ Create a style.css file
  Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
  Text Domain:  twenty-fifteen-child
 */
+```
+
+**Code snippet for functions.php**
+
+```
+<?php
+function my_theme_enqueue_styles() {
+
+    $parent_style = 'parent-style'; // This is 'twentyfifteen-style' for the Twenty Fifteen theme.
+
+    wp_enqueue_style( $parent_style, get_template_directory_uri() . '/style.css' );
+    wp_enqueue_style( 'child-style',
+        get_stylesheet_directory_uri() . '/style.css',
+        array( $parent_style ),
+        wp_get_theme()->get('Version')
+    );
+}
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
+?>
 ```
 
 ### Useful links :-)
