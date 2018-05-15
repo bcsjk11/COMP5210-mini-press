@@ -1,5 +1,11 @@
 ## Setup your wordpress instance
 
+**Navigate to your desktop (assumed) or any folder where you place your code**
+
+```
+cd ~/Desktop
+```
+
 **Download the container file**
 
 ```
@@ -23,31 +29,20 @@ docker-compose up -d
 **Run the wordpress setup**
 
 ```
-
 http://localhost/
-
-```
-
-**If the database does not exist do this:**
-
-```
-docker exec -it wp_mysql_5210 bash
-
-mysql -u root -p -e "create database db5210"; 
 
 ```
 
 **Create back up of your database**
 
 ```
-mysqldump --add-drop-table -h wp_mysql_5210 -u root -p db5210 > /var/lib/mysql/backup.sql
+docker exec wp_mysql_5210 /usr/bin/mysqldump -u root --password=123 db5210 > backup.sql
 ```
 
 **Restore your back up of your database**
 
 ```
-cp backup.sql databases/wp_mysql_5210/backup.sql
-mysql -u root -p < /var/lib/mysql/backup.sql
+cat backup.sql | docker exec -i wp_mysql_5210 /usr/bin/mysql -u root --password=123 db5210
 ```
 
 **Copy the backup.sql file into your main wp folder**
