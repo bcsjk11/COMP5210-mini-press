@@ -25,5 +25,4 @@ services:
     environment:
       MYSQL_DATABASE: "db5210"
       MYSQL_ROOT_PASSWORD: "123"
-      MYSQL_DATABASE: "phpmyadmin"
     container_name: "wp_mysql_5210"
