@@ -103,3 +103,5 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 ### Useful links :-)
 
 > DB Backup and Restore: https://gist.github.com/spalladino/6d981f7b33f6e0afe6bb
+
+> Git ignore for Wordpress: https://gist.github.com/salcode/b515f520d3f8207ecd04
